@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Profile Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+    .form-outer {
+      max-width: 980px;
+      margin: 40px auto;
+      background: #fff;
+      border: 3px solid #000;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(45,42,44,0.10);
+      padding: 32px 40px 32px 40px;
+      position: relative;
+    }
+    .header-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .college-logo {
+      width: 75px; /* Further reduced width for the logo */
+      height: 75px; /* Further reduced height for the logo */
+      object-fit: contain;
+      margin-right: 18px;
+    }
+    .college-info {
+      flex: 1;
+      text-align: center;
+    }
+    .college-info h1 {
+      font-size: 1.28em;
+      font-weight: bold;
+      margin: 0;
+      letter-spacing: 0.8px;
+    }
+    .college-info .tiny {
+      font-size: 0.99em;
+    }
+    .college-info .smaller {
+      font-size: 0.87em;
+    }
+    .form-title {
+      text-align: center;
+      font-size: 1.18em;
+      margin: 26px 0 12px 0;
+      font-weight: bold;
+      letter-spacing: 0.7px;
+    }
+    .section-title {
+      background: #e2e6ef;
+      font-weight: bold;
+      padding: 7px 0;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      margin-top: 19px;
+      border-left: 5px solid #2a2a2a;
+      padding-left: 12px;
+      font-size: 1.04em;
+      letter-spacing:0.4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+    td, th {
+      padding: 6px 8px;
+      vertical-align: top;
+      border: none;
+    }
+    th {
+      text-align: left;
+      font-weight: bold;
+      background: #f6f6fa;
+    }
+    input, select, textarea {
+      width: 95%;
+      padding: 6px;
+      margin-top: 2px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1em;
+      font-family: inherit;
+      background: #fcfcff;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 38px;
+    }
+    .inline-radio {
+      width: auto;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .footer-note {
+      margin-top: 17px;
+      font-size: 0.98em;
+      color: #333;
+    }
+    @media (max-width: 700px) {
+      .form-outer { padding: 13px 3vw 20px 3vw; }
+      .college-logo { width:40px; height:40px; margin-right:9px;} /* Further reduced size for smaller screens */
+    }
+  </style>
+</head>
+<body>
+  <div class="form-outer">
+    <div class="header-row">
+      <img src="https://lh5.googleusercontent.com/proxy/GFtlNbBZDFw6RzkhCVF56ScxB4zKBg2Evqc6iHC_gwOXVkPrixqPXa1mb7hpjqQhkE9wDa2o77xY4b7RaX4hnG_e2ZY" alt="College Logo" class="college-logo" />
+      <div class="college-info">
+        <h1>GAYATRI VIDYA PARISHAD COLLEGE OF ENGINEERING FOR WOMEN (A)</h1>
+        <div class="tiny">
+          Madhurawada :: Visakhapatnam – 530 048 <br>
+          (Approved by AICTE, New Delhi and Affiliated to Andhra University, Visakhapatnam)<br>
+          Accredited by NAAC with "A" from 2022 to 2027
+        </div>
+        <div class="smaller">
+          CSE, ECE and IT Courses Accredited by NBA (2019-2022) and Re-accredited by NBA (2022-2025)<br>
+          EEE Course Accredited by NBA (2023-2026)
+        </div>
+        <div class="tiny"><u>
+          Ph: 0891-2739144 | Fax: 0891-2562639 | e-mail: gvpcgew@gmail.com |Website: <u>www.gvpcew.ac.in</u>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="form-title">STUDENT PROFILE</div>
+
+    <div class="section-title">STUDENT PROFILE</div>
+    <table>
+      <tr>
+        <td>H T No.</td>
+        <td><input type="text" name="htno"></td>
+        <td>Name of the Student (as per SSC)</td>
+        <td><input type="text" name="name"></td>
+        <td>Branch</td>
+        <td><input type="text" name="branch"></td>
+      </tr>
+      <tr>
+        <td>Date of Birth (as per SSC)</td>
+        <td><input type="date" name="dob"></td>
+        <td>AADHAR No. (self)</td>
+        <td><input type="text" name="aadhar"></td>
+        <td>Mobile No. (Self)</td>
+        <td><input type="text" name="mobile"></td>
+      </tr>
+      <tr>
+        <td>E-mail ID</td>
+        <td colspan="5"><input type="email" name="email" style="width: 60%;"></td>
+      </tr>
+    </table>
+
+    <div class="section-title">Educational Details</div>
+    <table>
+      <tr>
+        <th colspan="2">SSC / CBSE</th>
+        <th>School of Study & Place</th>
+      </tr>
+      <tr>
+        <td>% of Marks</td>
+        <td>Grade</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="ssc_marks"></td>
+        <td><input type="text" name="ssc_grade"></td>
+        <td><input type="text" name="ssc_school"></td>
+      </tr>
+      <tr style="height:10px"></tr>
+      <tr>
+        <th colspan="2">INTERMEDIATE / +2 / DIPLOMA</th>
+        <th>College of Study & Place</th>
+      </tr>
+      <tr>
+        <td>% of Marks</td>
+        <td>Grade</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="inter_marks"></td>
+        <td><input type="text" name="inter_grade"></td>
+        <td><input type="text" name="inter_college"></td>
+      </tr>
+    </table>
+
+    <div class="section-title">Qualifying Examination Details</div>
+    <table>
+      <tr>
+        <th>EAMCET</th>
+        <th>JEE</th>
+        <th>ECET (Diploma)</th>
+      </tr>
+      <tr>
+        <td>
+          H T NO: <input type="text" name="eamcet_htno"><br>
+          Year: <input type="text" name="eamcet_year"><br>
+          Rank: <input type="text" name="eamcet_rank">
+        </td>
+        <td>
+          H T NO: <input type="text" name="jee_htno"><br>
+          Year: <input type="text" name="jee_year"><br>
+          Rank: <input type="text" name="jee_rank">
+        </td>
+        <td>
+          H T NO: <input type="text" name="ecet_htno"><br>
+          Year: <input type="text" name="ecet_year"><br>
+          Rank: <input type="text" name="ecet_rank">
+        </td>
+      </tr>
+    </table>
+
+    <div class="section-title">Admission Details</div>
+    <table>
+      <tr>
+        <td>Category of Admission</td>
+        <td colspan="3">
+          <label><input type="checkbox" name="cat_eamcet" class="inline-radio">EAMCET</label>
+          <label><input type="checkbox" name="cat_spot" class="inline-radio">SPOT</label>
+          <label><input type="checkbox" name="cat_ecet" class="inline-radio">ECET</label>
+        </td>
+        <td>Cat A</td><td><input type="checkbox" name="cat_a"></td>
+        <td>Cat B</td><td><input type="checkbox" name="cat_b"></td>
+      </tr>
+      <tr>
+        <td>Nationality & Religion</td>
+        <td><input type="text" name="nationality"></td>
+        <td>Caste & Category</td>
+        <td><input type="text" name="caste"></td>
+        <td>State to which belongs</td>
+        <td colspan="3"><input type="text" name="state"></td>
+      </tr>
+      <tr>
+        <td>Availing AP Govt. Fee Reimbursement Scheme</td>
+        <td colspan="7">
+          <label><input type="radio" name="fee_scheme" value="YES" class="inline-radio">YES</label>
+          <label><input type="radio" name="fee_scheme" value="NO" class="inline-radio">NO</label>
+          <label><input type="radio" name="fee_scheme" value="EWS" class="inline-radio">EWS</label>
+        </td>
+      </tr>
+    </table>
+
+    <div class="section-title">Details of Parents</div>
+    <table>
+      <tr>
+        <th></th>
+        <th>Father’s Name</th>
+        <th>Mother’s Name</th>
+      </tr>
+      <tr>
+        <td>Qualification</td>
+        <td><input type="text" name="father_qualification"></td>
+        <td><input type="text" name="mother_qualification"></td>
+      </tr>
+      <tr>
+        <td>Occupation</td>
+        <td><input type="text" name="father_occupation"></td>
+        <td><input type="text" name="mother_occupation"></td>
+      </tr>
+      <tr>
+        <td>Annual Income</td>
+        <td><input type="text" name="father_income"></td>
+        <td><input type="text" name="mother_income"></td>
+      </tr>
+      <tr>
+        <td>Land Line (Off/Res)</td>
+        <td><input type="text" name="father_landline"></td>
+        <td><input type="text" name="mother_landline"></td>
+      </tr>
+      <tr>
+        <td>Mobile No.</td>
+        <td><input type="text" name="father_mobile"></td>
+        <td><input type="text" name="mother_mobile"></td>
+      </tr>
+      <tr>
+        <td>E-mail ID</td>
+        <td><input type="email" name="father_email"></td>
+        <td><input type="email" name="mother_email"></td>
+      </tr>
+      <tr>
+        <td>PERMANENT ADDRESS</td>
+        <td colspan="2"><textarea name="permanent_address" rows="2"></textarea></td>
+      </tr>
+      <tr>
+        <td>CONTACT ADDRESS</td>
+        <td colspan="2"><textarea name="contact_address" rows="2"></textarea></td>
+      </tr>
+    </table>
+
+    <div class="section-title">Details of Hostel (if any) & Local Guardian</div>
+    <table>
+      <tr>
+        <th>DETAILS OF HOSTEL (if any)</th>
+        <th>Details of LOCAL Guardian</th>
+      </tr>
+      <tr>
+        <td>
+          Hostel (Name): <input type="text" name="hostel_name"><br>
+          Address: <textarea name="hostel_address" rows="2"></textarea><br>
+          Phone No.: <input type="text" name="hostel_phone"><br>
+          Mobile No.: <input type="text" name="hostel_mobile">
+        </td>
+        <td>
+          Name: <input type="text" name="guardian_name"><br>
+          Address: <textarea name="guardian_address" rows="2"></textarea><br>
+          Phone No.: <input type="text" name="guardian_phone"><br>
+          Mobile No.: <input type="text" name="guardian_mobile">
+        </td>
+       </tr>
+     </table>
+
+         </body>
+ </html>
